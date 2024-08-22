@@ -16,7 +16,7 @@
 package org.jmesa.core.filter;
 
 import java.util.Locale;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.web.WebContext;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;

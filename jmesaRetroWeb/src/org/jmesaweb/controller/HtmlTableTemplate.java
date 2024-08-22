@@ -17,7 +17,7 @@ package org.jmesaweb.controller;
 
 import java.util.Collection;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * An interface to bridge Groovy and Java code.

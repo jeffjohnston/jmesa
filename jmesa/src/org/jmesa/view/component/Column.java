@@ -15,7 +15,7 @@
  */
 package org.jmesa.view.component;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.util.SupportUtils;
 import org.jmesa.view.AbstractContextSupport;
 import org.jmesa.view.ViewUtils;
@@ -191,7 +191,7 @@ public class Column extends AbstractContextSupport {
      * Set if column is exportable.
      * 
      * @since 4.0
-     * @param editable Is true if the column is exportable.
+     * @param exportable Is true if the column is exportable.
      */
     public void setExportable(Boolean exportable) {
         

@@ -37,7 +37,7 @@ import static com.lowagie.text.pdf.BaseFont.createFont;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import org.jmesa.view.AbstractExportView;
-import static org.apache.commons.lang.StringUtils.isNotBlank;
+import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import static org.jmesa.view.ExportConstants.PDF_FONT_NAME;
 import static org.jmesa.view.ExportConstants.PDF_FONT_ENCODING;
 import org.slf4j.Logger;

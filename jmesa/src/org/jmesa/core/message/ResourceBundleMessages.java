@@ -15,15 +15,15 @@
  */
 package org.jmesa.core.message;
 
+import org.apache.commons.lang3.StringUtils;
+import org.jmesa.web.WebContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
-import org.apache.commons.lang.StringUtils;
-import org.jmesa.web.WebContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @since 2.0

@@ -19,7 +19,7 @@ import java.io.UnsupportedEncodingException;
 import static java.net.URLDecoder.decode;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.core.message.Messages;
 import org.jmesa.web.WebContext;
 import org.jmesa.worksheet.state.SessionWorksheetState;

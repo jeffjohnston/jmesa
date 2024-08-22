@@ -16,7 +16,6 @@
 package org.jmesa.worksheet;
 
 import java.io.Serializable;
-import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Represents the unique property for the row.
@@ -76,10 +75,10 @@ public class UniqueProperty implements Serializable {
 
     @Override
     public String toString() {
-		
-        ToStringBuilder builder = new ToStringBuilder(this);
-        builder.append("name", name);
-        builder.append("value", value);
-        return builder.toString();
+
+        return "UniqueProperty{" +
+                "name='" + name + '\'' +
+                ", value='" + value + '\'' +
+                '}';
     }
 }

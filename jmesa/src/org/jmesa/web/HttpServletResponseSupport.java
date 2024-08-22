@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 package org.jmesa.web;
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Support to handle the HttpServletResponse.

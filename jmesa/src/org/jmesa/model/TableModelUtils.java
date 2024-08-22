@@ -15,13 +15,9 @@
  */
 package org.jmesa.model;
 
-import java.lang.reflect.Type;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import jakarta.servlet.http.HttpServletRequest;
 import org.jmesa.facade.TableFacade;
 import org.jmesa.limit.Limit;
 import org.jmesa.limit.LimitActionFactory;
@@ -36,8 +32,10 @@ import org.jmesa.view.html.component.HtmlRow;
 import org.jmesa.view.html.component.HtmlTable;
 import org.jmesa.worksheet.Worksheet;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+import java.util.Collection;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * A series of utilities that complements the TableModel object. Especially useful

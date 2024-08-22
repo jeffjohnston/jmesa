@@ -15,20 +15,21 @@
  */
 package org.jmesa.core.sort;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import org.apache.commons.beanutils.BeanComparator;
 import org.apache.commons.collections.comparators.ComparableComparator;
 import org.apache.commons.collections.comparators.ComparatorChain;
 import org.apache.commons.collections.comparators.NullComparator;
 import org.jmesa.limit.Limit;
+import org.jmesa.limit.Order;
 import org.jmesa.limit.Sort;
 import org.jmesa.limit.SortSet;
-import org.jmesa.limit.Order;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 import static org.jmesa.util.ItemUtils.getPropertyClassType;
 
 /**

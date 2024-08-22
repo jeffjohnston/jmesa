@@ -15,7 +15,7 @@
  */
 package org.jmesa.view.html.toolbar;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.core.CoreContext;
 import org.jmesa.view.html.HtmlBuilder;
 

@@ -15,12 +15,13 @@
  */
 package org.jmesa.worksheet.editor;
 
-import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
-import static org.apache.commons.lang.StringEscapeUtils.escapeJavaScript;
 import org.jmesa.limit.Limit;
 import org.jmesa.view.html.HtmlBuilder;
 import org.jmesa.worksheet.UniqueProperty;
 import org.jmesa.worksheet.WorksheetColumn;
+
+import static org.apache.commons.lang.xwork.StringEscapeUtils.escapeHtml;
+import static org.apache.commons.lang.xwork.StringEscapeUtils.escapeJavaScript;
 import static org.jmesa.worksheet.WorksheetUtils.isRowRemoved;
 
 /**

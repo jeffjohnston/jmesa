@@ -15,7 +15,7 @@
  */
 package org.jmesa.view.csv;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
 import org.jmesa.view.AbstractViewExporter;
 
 /**

@@ -15,7 +15,7 @@
  */
 package org.jmesa.view.html.component;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import org.jmesa.util.SupportUtils;
 import org.jmesa.view.component.Row;

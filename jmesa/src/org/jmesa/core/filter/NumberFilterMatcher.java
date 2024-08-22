@@ -15,11 +15,12 @@
  */
 package org.jmesa.core.filter;
 
+import org.apache.commons.lang3.StringUtils;
+import org.jmesa.web.WebContext;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
-import org.apache.commons.lang.StringUtils;
-import org.jmesa.web.WebContext;
 
 /**
  * The number filter matcher.

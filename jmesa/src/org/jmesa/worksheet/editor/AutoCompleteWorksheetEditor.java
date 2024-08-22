@@ -15,9 +15,10 @@
  */
 package org.jmesa.worksheet.editor;
 
-import static org.apache.commons.lang.StringEscapeUtils.escapeJavaScript;
 import org.jmesa.view.html.HtmlBuilder;
 import org.jmesa.worksheet.WorksheetColumn;
+
+import static org.apache.commons.lang.xwork.StringEscapeUtils.escapeJavaScript;
 
 /**
  * Defines autocomplete functionality for the worksheet editor.

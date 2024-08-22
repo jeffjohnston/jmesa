@@ -17,7 +17,7 @@ package org.jmesa.view;
 
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.view.html.component.HtmlColumn;
 import org.jmesa.worksheet.Worksheet;
 

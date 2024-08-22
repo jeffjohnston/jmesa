@@ -19,8 +19,8 @@ package org.jmesaweb.controller;
 import java.util.Collection;
 
 import java.util.Iterator;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.jmesa.facade.TableFacade;
 import org.jmesa.facade.TableFacadeImpl;

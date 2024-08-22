@@ -16,7 +16,7 @@
 package org.jmesa.view.editor;
 
 import java.util.Locale;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.util.ItemUtils;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;

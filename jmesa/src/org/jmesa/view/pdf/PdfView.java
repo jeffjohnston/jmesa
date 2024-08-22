@@ -17,8 +17,8 @@ package org.jmesa.view.pdf;
 
 import java.util.Iterator;
 import java.util.List;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesa.util.SupportUtils;
 import org.jmesa.view.AbstractExportView;
 import org.jmesa.view.component.Column;

@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jmesaweb.domain.Name;
 import org.jmesaweb.domain.President;
 import org.springframework.beans.factory.InitializingBean;

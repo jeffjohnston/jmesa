@@ -15,14 +15,7 @@
  */
 package org.jmesa.view.html;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringEscapeUtils;
+import com.google.gson.Gson;
 import org.jmesa.core.CoreContext;
 import org.jmesa.limit.Limit;
 import org.jmesa.limit.RowSelect;
@@ -39,7 +32,9 @@ import org.jmesa.worksheet.Worksheet;
 import org.jmesa.worksheet.WorksheetRow;
 import org.jmesa.worksheet.WorksheetRowStatus;
 
-import com.google.gson.Gson;
+import java.util.*;
+
+import static org.xhtmlrenderer.util.GeneralUtil.escapeHTML;
 
 /**
  * @since 2.0
@@ -375,7 +370,7 @@ public class HtmlSnippets extends AbstractContextSupport {
         String name = limit.getId() + "_exp_";
         html.newline().input().type("hidden");
         html.name(name);
-        html.value(StringEscapeUtils.escapeHtml(GSON.toJson(columnInfo)));
+        html.value(escapeHTML(GSON.toJson(columnInfo)));
         html.end();
 
         return html.toString();

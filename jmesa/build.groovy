@@ -262,8 +262,8 @@ class Build {
     def retroJreDir() {
         if (!jreDir) {
             ant.echo(message: "Please select the base directory of a 1.4 JRE for the retro jar:")
-            def chooser = new javax.swing.JFileChooser()
-            chooser.fileSelectionMode = javax.swing.JFileChooser.DIRECTORIES_ONLY
+            def chooser = new jakarta.swing.JFileChooser()
+            chooser.fileSelectionMode = jakarta.swing.JFileChooser.DIRECTORIES_ONLY
             chooser.multiSelectionEnabled = false
             chooser.showDialog(null, "Use as JRE 1.4 Home")
             jreDir = chooser.selectedFile

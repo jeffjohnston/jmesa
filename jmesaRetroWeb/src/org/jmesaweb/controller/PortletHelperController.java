@@ -1,7 +1,7 @@
 package org.jmesaweb.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.jmesaweb.portlet.PortletTable;
 import org.jmesaweb.service.PresidentService;

@@ -15,14 +15,13 @@
  */
 package org.jmesa.worksheet;
 
+import org.apache.commons.lang3.StringUtils;
+import org.jmesa.core.message.Messages;
+
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import org.apache.commons.lang.StringUtils;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.jmesa.core.message.Messages;
 
 /**
  * <p>
@@ -214,10 +213,10 @@ public class WorksheetRow implements Serializable {
 
     @Override
     public String toString() {
-		
-        ToStringBuilder builder = new ToStringBuilder(this);
-        builder.append("uniqueProperty", uniqueProperty);
-        builder.append("columns", worksheetColumns);
-        return builder.toString();
+
+        return "WorksheetRow{" +
+                "uniqueProperty=" + uniqueProperty +
+                ", worksheetColumns=" + worksheetColumns +
+                '}';
     }
 }

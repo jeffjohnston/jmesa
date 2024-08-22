@@ -15,9 +15,10 @@
  */
 package org.jmesa.util;
 
-import java.lang.reflect.Method;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.apache.log4j.Logger;
+import java.lang.reflect.Method;
 
 /**
  * Utilities for java bean.
@@ -26,7 +27,7 @@ import org.apache.log4j.Logger;
  */
 public class BeanUtils {
 		
-    private static final Logger logger = Logger.getLogger(BeanUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(BeanUtils.class);
     
     /**
      * the possible prefixes for read method

@@ -15,7 +15,7 @@
  */
 package org.jmesa.model.tag;
 
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.PageContext;
 import org.jmesa.facade.TableFacade;
 import static org.jmesa.facade.TableFacadeFactory.createSpringTableFacade;
 import org.jmesa.web.JspPageSpringWebContext;

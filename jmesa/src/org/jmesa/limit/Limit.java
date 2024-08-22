@@ -15,8 +15,9 @@
  */
 package org.jmesa.limit;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.io.Serializable;
-import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * <p>
@@ -168,7 +169,7 @@ public class Limit implements Serializable {
 
     @Override
     public String toString() {
-		
+
         ToStringBuilder builder = new ToStringBuilder(this);
         builder.append("id", getId());
         builder.append("export", getExportType());
@@ -177,4 +178,5 @@ public class Limit implements Serializable {
         builder.append("sortSet", getSortSet());
         return builder.toString();
     }
+
 }

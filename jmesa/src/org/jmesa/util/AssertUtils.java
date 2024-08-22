@@ -15,7 +15,7 @@
  */
 package org.jmesa.util;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @version 2.4
