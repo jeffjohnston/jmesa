@@ -15,31 +15,32 @@
  */
 package org.jmesa.limit;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Jeff Johnston
  */
 public class RowSelectTest {
-		
+
 
     @Test
     public void createRowSelect() {
-		
+
         int maxRows = 2;
         int totalRows = 5;
         int page = 5;
 
         RowSelect rowSelect = new RowSelect(page, maxRows, totalRows);
 
-        assertTrue("page", rowSelect.getPage() == 3);
-        assertTrue("max rows", rowSelect.getMaxRows() == 2);
+        assertEquals(3, rowSelect.getPage(), "page");
+        assertEquals(2, rowSelect.getMaxRows(), "max rows");
 
         int rowStart = rowSelect.getRowStart();
         int rowEnd = rowSelect.getRowEnd();
 
-        assertTrue("row end greater than row start", rowEnd >= rowStart);
+        assertTrue(rowEnd >= rowStart, "row end greater than row start");
     }
 }

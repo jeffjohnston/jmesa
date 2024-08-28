@@ -19,8 +19,8 @@ import java.util.Collection;
 import jakarta.servlet.http.HttpServletRequest;
 import org.jmesa.core.President;
 import org.jmesa.core.PresidentDao;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.jmesa.test.AbstractTestCase;
 import org.jmesa.test.Parameters;
@@ -29,7 +29,7 @@ import org.jmesa.test.SpringParametersAdapter;
 import org.jmesa.worksheet.UniqueProperty;
 import org.jmesa.worksheet.Worksheet;
 import org.jmesa.worksheet.WorksheetRow;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 
 /**

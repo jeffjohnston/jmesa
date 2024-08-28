@@ -15,7 +15,7 @@
  */
 package org.jmesa.core.sort;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,7 +24,7 @@ import java.util.Vector;
 import org.apache.commons.beanutils.BeanComparator;
 import org.apache.commons.collections.comparators.ComparatorChain;
 import org.apache.commons.collections.comparators.NullComparator;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ComparatorTest {
 		
