@@ -56,7 +56,7 @@ import static org.jmesa.view.html.HtmlConstants.COLUMN_EXPORT_EDITOR;
 
 /**
  * Common utilities for the tag classes.
- * 
+ *
  * @since 2.2.1
  * @author Jeff Johnston
  */
@@ -65,13 +65,13 @@ class TagUtils {
     private static Logger logger = LoggerFactory.getLogger(TagUtils.class);
 
     static Object createInstance(String className) {
-		
+
         if (StringUtils.isEmpty(className)) {
             return null;
         }
 
         try {
-            return Class.forName(className).newInstance();
+            return Class.forName(className.strip()).newInstance();
         } catch (Exception e) {
             logger.error("Could not create the class [" + className + "]", e);
             throw new RuntimeException("Could not create the class [" + className + "]", e);
@@ -79,10 +79,10 @@ class TagUtils {
     }
 
     /**
-     * @return Is true is the validation passes
+     * @return Is true if the validation passes
      */
     static boolean validateColumn(SimpleTagSupport simpleTagSupport, String property) {
-		
+
         if (property == null) {
             return true; // no coflicts
         }
@@ -110,7 +110,7 @@ class TagUtils {
      * @return Get the FilterMatcherMap object.
      */
     static FilterMatcherMap getTableFacadeFilterMatcherMap(String filterMatcherMap) {
-		
+
         return (FilterMatcherMap) createInstance(filterMatcherMap);
     }
 
@@ -118,7 +118,7 @@ class TagUtils {
      * @return Get the Messages object.
      */
     static Messages getTableFacadeMessages(String messages) {
-		
+
         return (Messages) createInstance(messages);
     }
 
@@ -126,7 +126,7 @@ class TagUtils {
      * @return Get the Preferences object.
      */
     static Preferences getTableFacadePreferences(String preferences) {
-		
+
         return (Preferences) createInstance(preferences);
     }
 
@@ -134,7 +134,7 @@ class TagUtils {
      * @return Get the RowFilter object.
      */
     static RowFilter getTableFacadeRowFilter(String rowFilter) {
-		
+
         return (RowFilter) createInstance(rowFilter);
     }
 
@@ -142,27 +142,27 @@ class TagUtils {
      * @return Get the ColumnSort object.
      */
     static ColumnSort getTableFacadeColumnSort(String columnSort) {
-		
+
         return (ColumnSort) createInstance(columnSort);
     }
 
     /**
      * Get the Toolbar. If the Toolbar does not exist then one will be created.
-     * 
+     *
      * @return Get the Toolbar object.
      */
     static Toolbar getTableFacadeToolbar(String toolbar) {
-		
+
         return (Toolbar) createInstance(toolbar);
     }
 
     /**
      * Convert the max row increments from a string to an int array.
-     * 
+     *
      * @return Get the max row increments.
      */
     public static int[] getTableFacadeMaxRowIncrements(String maxRowsIncrements) {
-		
+
         if (StringUtils.isEmpty(maxRowsIncrements)) {
             return null;
         }
@@ -180,11 +180,11 @@ class TagUtils {
 
     /**
      * Get the View. If the View does not exist then one will be created.
-     * 
+     *
      * @return Get the View object.
      */
     static View getTableFacadeView(String view) {
-		
+
         return (View) createInstance(view);
     }
 
@@ -194,17 +194,17 @@ class TagUtils {
      * @return Get the State object.
      */
     static State getTableFacadeState(String state) {
-		
+
         return (State) createInstance(state);
     }
 
     /**
      * Get the table TableRenderer object.
-     * 
+     *
      * @since 2.2
      */
     static HtmlTableRenderer getTableTableRenderer(HtmlTable table, String tableRenderer) {
-		
+
         if (StringUtils.isBlank(tableRenderer)) {
             return table.getTableRenderer();
         }
@@ -214,11 +214,11 @@ class TagUtils {
 
     /**
      * Get the row RowRenderer object.
-     * 
+     *
      * @since 2.2
      */
     static HtmlRowRenderer getRowRowRenderer(HtmlRow row, String rowRenderer) {
-		
+
         if (StringUtils.isBlank(rowRenderer)) {
             return row.getRowRenderer();
         }
@@ -230,7 +230,7 @@ class TagUtils {
      * Get the row Onclick RowEvent object.
      */
     static RowEvent getRowOnclick(HtmlRow row, String onclick) {
-		
+
         if (StringUtils.isBlank(onclick)) {
             return row.getOnclick();
         }
@@ -242,7 +242,7 @@ class TagUtils {
      * Get the row Onmouseover RowEvent object.
      */
     static RowEvent getRowOnmouseover(HtmlRow row, String onmouseover) {
-		
+
         if (StringUtils.isBlank(onmouseover)) {
             return row.getOnmouseover();
         }
@@ -254,7 +254,7 @@ class TagUtils {
      * Get the row Onmouseout RowEvent object.
      */
     static RowEvent getRowOnmouseout(HtmlRow row, String onmouseout) {
-		
+
         if (StringUtils.isBlank(onmouseout)) {
             return row.getOnmouseout();
         }
@@ -267,7 +267,7 @@ class TagUtils {
      * @return The column CellRenderer object.
      */
     static CellRenderer getColumnCellRenderer(HtmlColumn column, String cellRenderer) {
-		
+
         if (StringUtils.isBlank(cellRenderer)) {
             return null;
         }
@@ -279,16 +279,16 @@ class TagUtils {
      * <p>
      * If the worksheetEditor is not defined then create a WorksheetEditor.
      * </p>
-     * 
+     *
      * <p>
      * If it is defined and it extends ContextSupport then set the WebContext and CoreContext on the
      * worksheetEditor.
      * </p>
-     * 
+     *
      * @return The WorksheetEditor to use.
      */
     static WorksheetEditor getColumnWorksheetEditor(HtmlColumn column, String worksheetEditor) {
-		
+
         if (StringUtils.isEmpty(worksheetEditor)) {
             return null;
         }
@@ -300,17 +300,17 @@ class TagUtils {
      * <p>
      * If the cellEditor is not defined then create a BasicCellEditor.
      * </p>
-     * 
+     *
      * <p>
      * If it is defined and it extends ContextSupport then set the WebContext and CoreContext on the
      * editor. If a setPattern() method is defined on your editor and you have defined the column
      * pattern attribute on the tag it will be set on your CellEditor automatically.
      * </p>
-     * 
+     *
      * @return The CellEditor to use.
      */
     static CellEditor getColumnCellEditor(HtmlColumn column, String cellEditor, String pattern, boolean hasBody, CoreContext coreContext) {
-		
+
         boolean cellEditorNotDefined = StringUtils.isEmpty(cellEditor);
         if (hasBody && cellEditorNotDefined) {
             return new BasicCellEditor();
@@ -329,36 +329,36 @@ class TagUtils {
      * <p>
      * If the exportEditor is not defined then create a BasicCellEditor.
      * </p>
-     * 
+     *
      * <p>
      * If it is defined and it extends ContextSupport then set the WebContext and CoreContext on the
      * editor. If a setPattern() method is defined on your editor and you have defined the column
      * pattern attribute on the tag it will be set on your CellEditor automatically.
      * </p>
-     * 
+     *
      * @return The CellEditor to use.
      */
     static CellEditor getColumnExportEditor(HtmlColumn column, String exportEditor, String pattern, boolean hasBody, CoreContext coreContext) {
-        
+
         boolean cellEditorNotDefined = StringUtils.isEmpty(exportEditor);
         if (hasBody && cellEditorNotDefined) {
             return new BasicCellEditor();
         } else if (cellEditorNotDefined) {
             return PreferencesUtils.<CellEditor>createClassFromPreferences(coreContext, COLUMN_EXPORT_EDITOR);
         }
-        
+
         CellEditor result = (CellEditor) createInstance(exportEditor);
         SupportUtils.setPattern(result, pattern);
-        
+
         return result;
     }
-    
+
     /**
      * @since 2.2
      * @return The column FilterRenderer object.
      */
     static FilterRenderer getColumnFilterRenderer(HtmlColumn column, String filterRenderer) {
-		
+
         if (StringUtils.isBlank(filterRenderer)) {
             return null;
         }
@@ -371,11 +371,11 @@ class TagUtils {
      * If it is defined and it extends ContextSupport then set the WebContext and CoreContext on the
      * editor.
      * </p>
-     * 
+     *
      * @return The FilterEditor to use.
      */
     static FilterEditor getColumnFilterEditor(HtmlColumn column, String filterEditor) {
-		
+
         if (StringUtils.isEmpty(filterEditor)) {
             return null;
         }
@@ -388,7 +388,7 @@ class TagUtils {
      * @return The column HeaderRenderer object.
      */
     static HeaderRenderer getColumnHeaderRenderer(HtmlColumn column, String headerRenderer) {
-		
+
         if (StringUtils.isBlank(headerRenderer)) {
             return null;
         }
@@ -401,11 +401,11 @@ class TagUtils {
      * If it is defined and it extends ContextSupport then set the WebContext and CoreContext on the
      * editor.
      * </p>
-     * 
+     *
      * @return The HeaderEditor to use.
      */
     static HeaderEditor getColumnHeaderEditor(HtmlColumn column, String headerEditor) {
-		
+
         if (StringUtils.isEmpty(headerEditor)) {
             return null;
         }
@@ -419,13 +419,13 @@ class TagUtils {
      * </p>
      */
     static Map<String, String> getNameValueMap(String input, String errorMessage) {
-		
+
         if (StringUtils.isEmpty(input)) {
             return Collections.emptyMap();
         }
-        
+
         Map<String, String> nameValueMap = new HashMap<String, String>();
-        
+
         for (String nameValue: input.split(";")) {
             String nameValueParams[] = nameValue.split(":");
             if (nameValueParams.length != 2) {
@@ -433,19 +433,19 @@ class TagUtils {
             }
             nameValueMap.put(nameValueParams[0].trim(), nameValueParams[1].trim());
         }
-        
+
         return nameValueMap;
     }
 
     /**
      * Take the comma separted Order values and convert them into an Array. The legal values include
      * "none, asc, desc".
-     * 
+     *
      * @since 2.2
      * @return The sort order array for the column.
      */
     public static Order[] getColumnSortOrder(String sortOrder) {
-		
+
         if (StringUtils.isBlank(sortOrder)) {
             return null;
         }
@@ -467,7 +467,7 @@ class TagUtils {
     }
 
     public static String[] getTableFacadeExportTypes(String exportTypes) {
-		
+
         if (StringUtils.isBlank(exportTypes)) {
             return null;
         }

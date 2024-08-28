@@ -19,6 +19,8 @@ public class JavaTimeCellEditor extends AbstractPatternCellEditor {
 
     private final Logger logger = LoggerFactory.getLogger(JavaTimeCellEditor.class);
 
+    public JavaTimeCellEditor() {}
+
     public JavaTimeCellEditor(String pattern) {
 
         setPattern(pattern);
